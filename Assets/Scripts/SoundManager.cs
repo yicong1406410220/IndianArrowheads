@@ -4,13 +4,32 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public AudioSource audioSource;
+
+    void Awake()
+    {
+        RefreshSound();
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void RefreshSound()
+    {
+        if (KeyValue.GetBool("DB_CloseSound"))
+        {
+            audioSource.mute = true;
+        }
+        else
+        {
+            audioSource.mute = false;
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

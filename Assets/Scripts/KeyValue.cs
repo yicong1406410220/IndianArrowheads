@@ -1,8 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public static class Utils {
+/// <summary>
+/// 键值处理
+/// </summary>
+public static class KeyValue{
+
+    [MenuItem("Tools/清除PlayPrefeb #&D", false, 1)]
+    static public void DeleteAll()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
 
     public static void SetInt(string key, int value)
     {
@@ -11,7 +22,7 @@ public static class Utils {
 
     public static int GetInt(string key)
     {
-        return PlayerPrefs.GetInt(key);
+        return PlayerPrefs.GetInt(key, 0);
     }
 
     public static void SetString(string key, string value)
@@ -21,7 +32,7 @@ public static class Utils {
 
     public static string GetString(string key)
     {
-        return PlayerPrefs.GetString(key);
+        return PlayerPrefs.GetString(key, "");
     }
 
     public static void SetBool(string key, bool value)
@@ -34,7 +45,7 @@ public static class Utils {
 
     public static bool GetBool(string key)
     {
-        int val = PlayerPrefs.GetInt(key);
+        int val = PlayerPrefs.GetInt(key, 0);
         if (val == 1)
             return true;
         return false;

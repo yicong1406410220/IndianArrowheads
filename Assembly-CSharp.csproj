@@ -62,12 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Scripts\KeyValue.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\UIPanel\abPanel.cs" />
     <Compile Include="Assets\Scripts\UIPanel\InfoPanel.cs" />
     <Compile Include="Assets\Scripts\UIPanel\TitlePanel.cs" />
-    <Compile Include="Assets\Scripts\Utils.cs" />
     <Compile Include="Assets\UIFramework\UFScripts\PanelBase.cs" />
     <Compile Include="Assets\UIFramework\UFScripts\PanelMgr.cs" />
     <Compile Include="Assets\UIFramework\UFScripts\root.cs" />
