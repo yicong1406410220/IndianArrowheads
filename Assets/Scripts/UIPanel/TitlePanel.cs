@@ -12,7 +12,6 @@ public class TitlePanel : PanelBase {
     public override void Init(params object[] args)
     {
         base.Init(args);
-        skinPath = "TitlePanel";
         layer = PanelLayer.Panel;
 
     }
@@ -20,7 +19,7 @@ public class TitlePanel : PanelBase {
     public override void OnShowing()
     {
         base.OnShowing();
-        Transform skinTrans = skin.transform;
+        Transform skinTrans = transform;
         startBtn = skinTrans.Find("StartBtn").GetComponent<Button>();
         infoBtn = skinTrans.Find("InfoBtn").GetComponent<Button>();
         startBtn.onClick.AddListener(OnStartClick);

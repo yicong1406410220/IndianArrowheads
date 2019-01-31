@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class abPanel : PanelBase {
+public class DiamondStorePanel : PanelBase {
 
+    public static DiamondStorePanel instance;
 
     public override void Init(params object[] args)
     {
         base.Init(args);
         layer = PanelLayer.Panel;
+        instance = this;
         
     }
 

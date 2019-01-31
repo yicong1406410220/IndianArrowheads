@@ -37,7 +37,7 @@ public class PanelMgr : MonoBehaviour {
     /// </summary>
     private void InitLayer()
     {
-        canvas = GameObject.Find("Canvas");
+        canvas = GameObject.Find("UICanvas");
         if (canvas == null)
         {
             Debug.LogError("panelMgr.InitLayer Canvas is null!");
@@ -57,36 +57,32 @@ public class PanelMgr : MonoBehaviour {
     /// <summary>
     /// 打开面板
     /// </summary>
-    public void OpenPanel<T>(string skinPath, params object[] args) where T : PanelBase
+    public void OpenPanel<T>(params object[] args) where T : PanelBase
     {
         //已经打开
-        string name = typeof(T).ToString();
-        if (dict.ContainsKey(name))
+        string PanelName = typeof(T).ToString();
+        if (dict.ContainsKey(PanelName))
         {
             return;
         }
-        //面板脚本
-        PanelBase panel = canvas.AddComponent<T>();
-        panel.Init(args);
-        dict.Add(name, panel);
-        //加载皮肤
-        skinPath = (skinPath != "" ? skinPath : panel.skinPath);
-        GameObject skin = Resources.Load<GameObject>("Panel/" + skinPath);
-        if (skin == null)
+        GameObject GoPanel = Resources.Load<GameObject>("Panel/" + PanelName);
+        if (GoPanel == null)
         {
-            Debug.LogError("panelMgr.Openpanel fail， skin is null， skinPath = " + skinPath);
+            Debug.LogError("panelMgr.Openpanel fail， Panel is null， PanelName = " + PanelName);
         }
-        panel.skin = (GameObject)Instantiate(skin);
+        T panelScript = ((GameObject)Instantiate(GoPanel)).GetComponent<T>();
+        dict.Add(PanelName, panelScript);
+        panelScript.Init(args);
         //坐标
-        Transform skinTrans = panel.skin.transform;
-        PanelLayer layer = panel.layer;
+        Transform PanelTrans = panelScript.transform;
+        PanelLayer layer = panelScript.layer;
         Transform parent = layerDict[layer];
-        skinTrans.SetParent(parent, false);
+        PanelTrans.SetParent(parent, false);
         //panel的生命周期
-        panel.OnShowing();
-        Tweener tweener = skinTrans.DOLocalMoveX(-1300, 2f).From();
+        panelScript.OnShowing();
+        Tweener tweener = PanelTrans.DOLocalMoveX(-1300, 2f).From();
         tweener.SetEase(Ease.InOutBack);
-        tweener.OnComplete(() => { panel.OnShowed(); });
+        tweener.OnComplete(() => { panelScript.OnShowed(); });
 
     }
 
@@ -101,12 +97,11 @@ public class PanelMgr : MonoBehaviour {
         panel.OnClosing();
         dict.Remove(name);
        
-        Tweener tweener = panel.skin.transform.DOLocalMoveX(1300, 2f);
+        Tweener tweener = panel.transform.DOLocalMoveX(1300, 2f);
         tweener.SetEase(Ease.OutBack);
         tweener.OnComplete(() => {
-            panel.OnClosing();
-            GameObject.Destroy(panel.skin);
-            Component.Destroy(panel);
+            panel.OnClosed();
+            GameObject.Destroy(panel.gameObject);
         });
         
     }

@@ -56,7 +56,7 @@ public class YcUITools : Editor {
         string temp = GetTemplete("UIPanelTemplet");
         temp = temp.Replace("<ScriptNamePanel>", scriptName);
         temp = temp.Replace("<ScriptNameBase>", "PanelBase");
-        temp = temp.Replace("<skinPath>", scriptName);
+        //temp = temp.Replace("<skinPath>", scriptName);
         string outPutFile = Application.dataPath + detailPanelPath + "/" + scriptName + ".cs";
         Save(outPutFile, temp);
         return outPutFile;

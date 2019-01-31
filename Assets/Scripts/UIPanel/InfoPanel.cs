@@ -10,7 +10,6 @@ public class InfoPanel : PanelBase {
     public override void Init(params object[] args)
     {
         base.Init(args);
-        skinPath = "InfoPanel";
         layer = PanelLayer.Panel;
         
     }
@@ -18,7 +17,7 @@ public class InfoPanel : PanelBase {
     public override void OnShowing()
     {
         base.OnShowing();
-        Transform skinTrans = skin.transform;
+        Transform skinTrans = transform;
         CloseButton = skinTrans.Find("CloseButton").GetComponent<Button>();
         CloseButton.onClick.AddListener(Close);
     }

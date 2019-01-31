@@ -1,19 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PanelBase : MonoBehaviour {
-    //皮肤路径
-    public string skinPath;
-
-    //皮肤
-    public GameObject skin;
 
     //层级
     public PanelLayer layer;
 
     //面板参数
     public object[] args;
+
+    public Button CloseBotton;
 
     #region 生命周期
     /// <summary>
@@ -23,6 +22,17 @@ public class PanelBase : MonoBehaviour {
     public virtual void Init(params object[] args)
     {
         this.args = args;
+        Transform CloseTf = gameObject.transform.Find("CloseButton");
+        if (CloseTf != null)
+        {
+            CloseBotton = CloseTf.GetComponent<Button>();
+            CloseBotton.onClick.AddListener(OnCloseBotton);
+        }
+    }
+
+    private void OnCloseBotton()
+    {
+        Close();
     }
 
     /// <summary>
@@ -55,8 +65,8 @@ public class PanelBase : MonoBehaviour {
     #region 操作
     public virtual void Close()
     {
-        string name = this.GetType().ToString();
-        PanelMgr.instance.ClosePanel(name);
+        string PanelName = this.GetType().ToString();
+        PanelMgr.instance.ClosePanel(PanelName);
     }
 
     #endregion
@@ -66,6 +76,9 @@ public class PanelBase : MonoBehaviour {
 
 		
 	}
-	
-	
+
+    public static explicit operator GameObject(PanelBase v)
+    {
+        throw new NotImplementedException();
+    }
 }
