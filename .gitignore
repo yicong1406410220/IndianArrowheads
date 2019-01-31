@@ -261,3 +261,6 @@ __pycache__/
 *.pyc
 /Temp
 /Library
+/Assembly-CSharp.csproj
+/Assembly-CSharp-Editor.csproj
+/IndianArrowheads.sln
