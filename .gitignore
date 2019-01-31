@@ -49,7 +49,6 @@ artifacts/
 *_p.c
 *_i.h
 *.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
@@ -261,5 +260,3 @@ __pycache__/
 *.pyc
 /Temp
 /Library
-/Assembly-CSharp.csproj
-/Assembly-CSharp-Editor.csproj
