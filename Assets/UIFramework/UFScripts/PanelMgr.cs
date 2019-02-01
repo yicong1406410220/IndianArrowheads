@@ -72,18 +72,13 @@ public class PanelMgr : MonoBehaviour {
         }
         T panelScript = ((GameObject)Instantiate(GoPanel)).GetComponent<T>();
         dict.Add(PanelName, panelScript);
-        panelScript.Init(args);
         //坐标
         Transform PanelTrans = panelScript.transform;
         PanelLayer layer = panelScript.layer;
         Transform parent = layerDict[layer];
         PanelTrans.SetParent(parent, false);
-        //panel的生命周期
-        panelScript.OnShowing();
-        Tweener tweener = PanelTrans.DOLocalMoveX(-1300, 2f).From();
-        tweener.SetEase(Ease.InOutBack);
-        tweener.OnComplete(() => { panelScript.OnShowed(); });
-
+        panelScript.Init(args);
+        
     }
 
     //关闭面板
@@ -93,17 +88,9 @@ public class PanelMgr : MonoBehaviour {
         if (panel == null)
         {
             return;
-        }
-        panel.OnClosing();
+        }   
         dict.Remove(name);
-       
-        Tweener tweener = panel.transform.DOLocalMoveX(1300, 2f);
-        tweener.SetEase(Ease.OutBack);
-        tweener.OnComplete(() => {
-            panel.OnClosed();
-            GameObject.Destroy(panel.gameObject);
-        });
-        
+        panel.CloseAnimation();
     }
 
 

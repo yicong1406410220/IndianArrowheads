@@ -4683,6 +4683,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223000011181691412, guid: 5de69f6464bc88e46afc95336a963b97,
+        type: 2}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de69f6464bc88e46afc95336a963b97, type: 2}
   m_IsPrefabAsset: 0

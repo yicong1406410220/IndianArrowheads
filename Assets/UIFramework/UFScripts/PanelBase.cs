@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class PanelBase : MonoBehaviour {
     public virtual void Init(params object[] args)
     {
         this.args = args;
+        //panel的生命周期
+        OpenAnimation();
         Transform CloseTf = gameObject.transform.Find("CloseButton");
         if (CloseTf != null)
         {
@@ -77,8 +80,22 @@ public class PanelBase : MonoBehaviour {
 		
 	}
 
-    public static explicit operator GameObject(PanelBase v)
+    private void OpenAnimation()
     {
-        throw new NotImplementedException();
+        OnShowing();
+        Tweener tweener = transform.DOLocalMoveX(-1300, 2f).From();
+        tweener.SetEase(Ease.InOutBack);
+        tweener.OnComplete(() => { OnShowed(); });
+    }
+
+    public void CloseAnimation()
+    {
+        OnClosing();
+        Tweener tweener = transform.DOLocalMoveX(1300, 2f);
+        tweener.SetEase(Ease.OutBack);
+        tweener.OnComplete(() => {
+            OnClosed();
+            GameObject.Destroy(gameObject);
+        });
     }
 }
