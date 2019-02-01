@@ -83,19 +83,24 @@ public class PanelBase : MonoBehaviour {
     private void OpenAnimation()
     {
         OnShowing();
-        Tweener tweener = transform.DOLocalMoveX(-1300, 2f).From();
-        tweener.SetEase(Ease.InOutBack);
-        tweener.OnComplete(() => { OnShowed(); });
+        //Tweener tweener = transform.DOLocalMoveX(-1300, 2f).From();
+        //tweener.SetEase(Ease.InOutBack);
+        //tweener.OnComplete(() => { OnShowed(); });
+        Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(transform.DOScale(1.1f, 0.3f)).Append(transform.DOScale(1f, 0.2f)).AppendCallback(() => { OnShowed(); });
+
     }
 
     public void CloseAnimation()
     {
         OnClosing();
-        Tweener tweener = transform.DOLocalMoveX(1300, 2f);
-        tweener.SetEase(Ease.OutBack);
-        tweener.OnComplete(() => {
-            OnClosed();
-            GameObject.Destroy(gameObject);
-        });
+        //Tweener tweener = transform.DOLocalMoveX(1300, 2f);
+        //tweener.SetEase(Ease.OutBack);
+        //tweener.OnComplete(() => {
+        //    OnClosed();
+        //    GameObject.Destroy(gameObject);
+        //});
+        OnClosed();
+        GameObject.Destroy(gameObject);
     }
 }
