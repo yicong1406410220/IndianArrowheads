@@ -13,7 +13,7 @@ public class PanelBase : MonoBehaviour {
     //面板参数
     public object[] args;
 
-    public Button CloseBotton;
+    private Button CloseButton;
 
     #region 生命周期
     /// <summary>
@@ -28,8 +28,8 @@ public class PanelBase : MonoBehaviour {
         Transform CloseTf = gameObject.transform.Find("CloseButton");
         if (CloseTf != null)
         {
-            CloseBotton = CloseTf.GetComponent<Button>();
-            CloseBotton.onClick.AddListener(OnCloseBotton);
+            CloseButton = CloseTf.GetComponent<Button>();
+            CloseButton.onClick.AddListener(OnCloseBotton);
         }
     }
 
@@ -80,7 +80,7 @@ public class PanelBase : MonoBehaviour {
 		
 	}
 
-    private void OpenAnimation()
+    public virtual void OpenAnimation()
     {
         OnShowing();
         //Tweener tweener = transform.DOLocalMoveX(-1300, 2f).From();
@@ -91,7 +91,7 @@ public class PanelBase : MonoBehaviour {
 
     }
 
-    public void CloseAnimation()
+    public virtual void CloseAnimation()
     {
         OnClosing();
         //Tweener tweener = transform.DOLocalMoveX(1300, 2f);

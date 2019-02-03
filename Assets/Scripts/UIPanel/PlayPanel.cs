@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,15 @@ public class PlayPanel : PanelBase {
     public override void OnShowing()
     {
         base.OnShowing();
+
+    }
+
+    public override void OpenAnimation()
+    {
+        OnShowing();
+        Transform bg = gameObject.transform.Find("bg");
+        Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(bg.DOScale(1.1f, 0.3f)).Append(bg.DOScale(1f, 0.2f)).AppendCallback(() => { OnShowed(); });
 
     }
 

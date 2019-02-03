@@ -8,7 +8,7 @@ public class root : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        PanelMgr.instance.OpenPanel<GoldStorePanel>("");
+        PanelMgr.instance.OpenPanel<PlayPanel>("");
     }
 	
 	// Update is called once per frame
