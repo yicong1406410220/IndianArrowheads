@@ -1,27 +1,25 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InfoPanel : PanelBase {
+public class ResurgencePanel : PanelBase {
 
-    Button CloseButton;
+    public static ResurgencePanel instance;
 
     public override void Init(params object[] args)
     {
         base.Init(args);
         layer = PanelLayer.Panel;
+        instance = this;
         
     }
 
     public override void OnShowing()
     {
         base.OnShowing();
-        Transform skinTrans = transform;
-        CloseButton = skinTrans.Find("CloseButton").GetComponent<Button>();
-        CloseButton.onClick.AddListener(Close);
-    }
 
+    }
 
 
 }
