@@ -258,12 +258,12 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
@@ -1112,10 +1112,10 @@ TextureImporter:
       name: buttonElse_42
       rect:
         serializedVersion: 2
-        x: 614
-        y: 372
-        width: 51
-        height: 39
+        x: 587
+        y: 327
+        width: 112
+        height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1204,106 +1204,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b832b67efae943a4891eff42f83f7608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_47
-      rect:
-        serializedVersion: 2
-        x: 626
-        y: 357
-        width: 25
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d0b518f140334e45873a059807a7ec1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_48
-      rect:
-        serializedVersion: 2
-        x: 588
-        y: 328
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fea4656f5ebe2e848b986bccfcd6fa6a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_49
-      rect:
-        serializedVersion: 2
-        x: 617
-        y: 328
-        width: 23
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 052c27be38d9ee44ab7d4e5baae6d74d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_50
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 328
-        width: 23
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4390a236eb3566e47a638cdf0daf1863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_51
-      rect:
-        serializedVersion: 2
-        x: 673
-        y: 328
-        width: 23
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 970205230df819c4fb362cdf7df25ea3
       vertices: []
       indices: 
       edges: []
@@ -1673,9 +1573,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 609
-        y: 214
-        width: 29
-        height: 28
+        y: 178
+        width: 60
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1684,26 +1584,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1b3acd3513e15fd47958fbacf667a419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_71
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 214
-        width: 29
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23e5ed3fadd610440884087ab0baa7c4
       vertices: []
       indices: 
       edges: []
@@ -1824,46 +1704,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 17bb390538e91f648a19f59baa3d76bc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_78
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 179
-        width: 26
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5e01057774b2b449836c860570cd539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_79
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 179
-        width: 29
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5875ef43a489c14eb9e3bc1ee995e7c
       vertices: []
       indices: 
       edges: []
@@ -2334,7 +2174,7 @@ TextureImporter:
         serializedVersion: 2
         x: 539
         y: 89
-        width: 23
+        width: 73
         height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2349,52 +2189,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttonElse_104
-      rect:
-        serializedVersion: 2
-        x: 565
-        y: 88
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc31b08a05aed9c44b275720d35bbff6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_105
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 89
-        width: 23
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a085fa6a1b4146442a99946c7aae4c57
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: buttonElse_106
       rect:
         serializedVersion: 2
         x: 613
         y: 91
-        width: 23
+        width: 71
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2404,46 +2204,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a4dd78ad90a5a224caef8a9b2dcc8ea1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_107
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 91
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f80b14c1157eea546b727fd93aaac93f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttonElse_108
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 91
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cd96a524d9fc9a46a122d83b550f4fb
       vertices: []
       indices: 
       edges: []
