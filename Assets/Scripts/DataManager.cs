@@ -22,10 +22,11 @@ public class DataManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        hello = ExcelDocumentsParse.LoadExcel("hello");
+        DB_Hello = ExcelDocumentsParse.LoadExcel("hello");
+        Debug.Log(DB_Hello["1"]["name"]);
     }
 
-    public Dictionary<string, Dictionary<string, string>> hello;
+    public Dictionary<string, Dictionary<string, string>> DB_Hello;
 
     // Update is called once per frame
     void Update () {
