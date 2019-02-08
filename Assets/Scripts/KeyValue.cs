@@ -25,7 +25,7 @@ public static class KeyValue{
         return PlayerPrefs.GetInt(key, 0);
     }
 
-    public static void SetFloat(string key, int value)
+    public static void SetFloat(string key, float value)
     {
         PlayerPrefs.SetFloat(key, value);
     }
