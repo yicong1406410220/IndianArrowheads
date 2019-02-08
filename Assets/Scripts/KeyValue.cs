@@ -25,6 +25,16 @@ public static class KeyValue{
         return PlayerPrefs.GetInt(key, 0);
     }
 
+    public static void SetFloat(string key, int value)
+    {
+        PlayerPrefs.SetFloat(key, value);
+    }
+
+    public static float GetFloat(string key)
+    {
+        return PlayerPrefs.GetFloat(key, 0);
+    }
+
     public static void SetString(string key, string value)
     {
         PlayerPrefs.SetString(key, value);
