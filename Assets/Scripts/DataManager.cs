@@ -28,6 +28,7 @@ public class DataManager : MonoBehaviour {
     {
         DB_Player = ExcelDocumentsParse.LoadExcel("Player");
         DB_Digger = ExcelDocumentsParse.LoadExcel("Digger");
+        Debug.Log(GameProps.Bomb);
     }
 
    

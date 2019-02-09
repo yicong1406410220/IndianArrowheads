@@ -16,7 +16,7 @@ public class LVConf : MonoBehaviour {
     void Start () {
         LVNumber.text = LV.ToString();
         //亮光圈的关卡
-        int GateLevel = KeyValue.GetInt("DB_GateLevel");
+        int GateLevel = PlayerPrefs.GetInt("DB_GateLevel");
         if (GateLevel == LV)
         {
             Aureole.SetActive(true);
