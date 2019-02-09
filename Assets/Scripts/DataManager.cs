@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using OfficeOpenXml;
 using System.IO;
+using System;
 
 public class DataManager : MonoBehaviour {
 
     public static DataManager instance;
+
+    public Dictionary<string, Dictionary<string, string>> DB_Player;
+    public Dictionary<string, Dictionary<string, string>> DB_Digger;
 
     private void Awake()
     {
@@ -17,16 +21,24 @@ public class DataManager : MonoBehaviour {
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        LoadDB();
     }
+
+    private void LoadDB()
+    {
+        DB_Player = ExcelDocumentsParse.LoadExcel("Player");
+        DB_Digger = ExcelDocumentsParse.LoadExcel("Digger");
+    }
+
+   
 
     // Use this for initialization
     void Start ()
     {
-        DB_Hello = ExcelDocumentsParse.LoadExcel("hello");
-        Debug.Log(DB_Hello["1"]["name"]);
+
+
     }
 
-    public Dictionary<string, Dictionary<string, string>> DB_Hello;
 
     // Update is called once per frame
     void Update () {
