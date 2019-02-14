@@ -2760,6 +2760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fad12eb14bf59438afeedb1d59566e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LiveMax: 5
+  LiveRecoveryTime: 10
 --- !u!4 &1014489488
 Transform:
   m_ObjectHideFlags: 0

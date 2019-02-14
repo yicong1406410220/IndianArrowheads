@@ -40,23 +40,23 @@ public static class PlayerData {
         return number;
     }
 
-    public static void AddLive(int value)
-    {
-        int number = PlayerPrefs.GetInt("LiveNumber", 0);
-        PlayerPrefs.GetInt("LiveNumber", number + value);
-    }
+    //public static void AddLive(int value)
+    //{
+    //    int number = PlayerPrefs.GetInt("LiveNumber", 0);
+    //    PlayerPrefs.GetInt("LiveNumber", number + value);
+    //}
 
-    public static void UseLive(int value)
-    {
-        int number = PlayerPrefs.GetInt("LiveNumber", 0);
-        PlayerPrefs.GetInt("LiveNumber", number - value);
-    }
+    //public static void UseLive(int value)
+    //{
+    //    int number = PlayerPrefs.GetInt("LiveNumber", 0);
+    //    PlayerPrefs.GetInt("LiveNumber", number - value);
+    //}
 
-    public static int GetLive()
-    {
-        int number = PlayerPrefs.GetInt("LiveNumber", 0);
-        return number;
-    }
+    //public static int GetLive()
+    //{
+    //    int number = PlayerPrefs.GetInt("LiveNumber", 0);
+    //    return number;
+    //}
 
     #region 获得道具数量
     public static void AddGameProps(GameProps gameProps, int value)
@@ -77,4 +77,6 @@ public static class PlayerData {
         return number;
     }
     #endregion
+
+
 }

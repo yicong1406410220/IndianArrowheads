@@ -45,10 +45,12 @@ public class DataManager : MonoBehaviour {
 
         PlayerData.AddDiamond(Convert.ToInt32(DB_Player["1"]["diamond"]));
         PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["gold"]));
-        PlayerData.AddLive(Convert.ToInt32(DB_Player["1"]["live"]));
 
         PlayerPrefs.SetInt("FirstGame", 1);
     }
+
+
+
 
     private void LoadDB()
     {
@@ -56,18 +58,7 @@ public class DataManager : MonoBehaviour {
         DB_Digger = ExcelDocumentsParse.LoadExcel("Digger");
     }
 
+
+ 
    
-
-    // Use this for initialization
-    void Start ()
-    {
-
-
-    }
-
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }
