@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System;
 
 /// <summary>
 /// 键值处理
@@ -15,35 +16,21 @@ public static class KeyValue{
     }
 
 
-    //public static void SetInt(string key, int value)
-    //{
-    //    PlayerPrefs.SetInt(key, value);
-    //}
+    public static void SetDouble(string key, double value)
+    {
+        PlayerPrefs.SetString(key, value.ToString());
+    }
 
-    //public static int GetInt(string key)
-    //{
-    //    return PlayerPrefs.GetInt(key, 0);
-    //}
-
-    //public static void SetFloat(string key, float value)
-    //{
-    //    PlayerPrefs.SetFloat(key, value);
-    //}
-
-    //public static float GetFloat(string key)
-    //{
-    //    return PlayerPrefs.GetFloat(key, 0);
-    //}
-
-    //public static void SetString(string key, string value)
-    //{
-    //    PlayerPrefs.SetString(key, value);
-    //}
-
-    //public static string GetString(string key)
-    //{
-    //    return PlayerPrefs.GetString(key, "");
-    //}
+    public static double GetDouble( string key, double value)
+    {
+        string str = PlayerPrefs.GetString(key, "");
+        if (str == "")
+        {
+            return value;
+        }
+        double val = Convert.ToDouble(str);
+        return val;
+    }
 
     public static void SetBool(string key, bool value)
     {
@@ -59,5 +46,13 @@ public static class KeyValue{
         if (val == 1)
             return true;
         return false;
+    }
+
+    public static bool GetBool(string key, bool value)
+    {
+        int val = PlayerPrefs.GetInt(key, 0);
+        if (val == 1)
+            return true;
+        return value;
     }
 }

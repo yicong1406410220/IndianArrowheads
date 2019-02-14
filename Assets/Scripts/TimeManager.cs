@@ -1,25 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeManager : MonoBehaviour {
+public class TimeManager{
 
     //得到时间轴
     public static double GetTimestamp(DateTime d)
     {
         TimeSpan ts = d - new DateTime(1970, 1, 1);
-        return ts.TotalMilliseconds;
+        return ts.TotalSeconds;
     }
 
-
-    // 仅在首次调用 Update 方法之前调用 Start
-    private void Start()
+    public static double GetNow()
     {
-        //Debug.Log(GetTimestamp(new DateTime(1970, 1, 2)));
+        double now = GetTimestamp(DateTime.Now);
+        return now;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+
 }

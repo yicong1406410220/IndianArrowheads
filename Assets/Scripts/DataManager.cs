@@ -47,6 +47,9 @@ public class DataManager : MonoBehaviour {
         PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["gold"]));
 
         PlayerPrefs.SetInt("FirstGame", 1);
+
+        KeyValue.SetDouble("LiveCoolingTime", TimeManager.GetNow());
+        PlayerPrefs.SetInt("AdditionalLiveNumber", 0);
     }
 
 
