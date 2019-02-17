@@ -35,6 +35,7 @@ public class PanelBase : MonoBehaviour {
 
     private void OnCloseBotton()
     {
+        SoundManager.instance.PlayBtn();
         Close();
     }
 

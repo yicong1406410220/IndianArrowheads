@@ -6,8 +6,19 @@ public class SoundManager : MonoBehaviour {
 
     public AudioSource audioSource;
 
+    public static SoundManager instance;
+
+    public AudioClip[] audioClip;
+
     void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
         RefreshSound();
     }
 
@@ -26,6 +37,11 @@ public class SoundManager : MonoBehaviour {
         {
             audioSource.mute = false;
         }
+    }
+
+    public void PlayBtn()
+    {
+        audioSource.PlayOneShot(audioClip[0]);
     }
 
     // Update is called once per frame

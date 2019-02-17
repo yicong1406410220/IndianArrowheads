@@ -10,16 +10,6 @@ public class DataManager : MonoBehaviour {
     public Dictionary<string, Dictionary<string, string>> DB_Player;
     public Dictionary<string, Dictionary<string, string>> DB_Digger;
 
-    /// <summary>
-    /// 最大体力
-    /// </summary>
-    public int LiveMax = 5;
-
-    /// <summary>
-    /// 回复一颗体力需要的时间
-    /// </summary>
-    public int LiveRecoveryTime = 10;
-
     private void Awake()
     {
         if (instance != null)
@@ -38,7 +28,7 @@ public class DataManager : MonoBehaviour {
     /// </summary>
     private void InitPlay()
     {
-        if (PlayerPrefs.GetInt("FirstGame", 0) == 0)
+        if (PlayerPrefs.GetInt("FirstGame", 0) == 1)
         {
             return;
         }

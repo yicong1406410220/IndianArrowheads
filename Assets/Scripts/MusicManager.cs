@@ -6,8 +6,17 @@ public class MusicManager : MonoBehaviour {
 
     public AudioSource audioSource;
 
+    public static MusicManager instance;
+
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
         RefreshSound();
     }
 

@@ -8,13 +8,13 @@ public static class PlayerData {
     public static void AddGold(int value)
     {
         int number = PlayerPrefs.GetInt("GoldNumber", 0);
-        PlayerPrefs.GetInt("GoldNumber", number + value);
+        PlayerPrefs.SetInt("GoldNumber", number + value);
     }
 
     public static void UseGold(int value)
     {
         int number = PlayerPrefs.GetInt("GoldNumber", 0);
-        PlayerPrefs.GetInt("GoldNumber", number - value);
+        PlayerPrefs.SetInt("GoldNumber", number - value);
     }
 
     public static int GetGold()
@@ -26,13 +26,13 @@ public static class PlayerData {
     public static void AddDiamond(int value)
     {
         int number = PlayerPrefs.GetInt("DiamondNumber", 0);
-        PlayerPrefs.GetInt("DiamondNumber", number + value);
+        PlayerPrefs.SetInt("DiamondNumber", number + value);
     }
 
     public static void UseDiamond(int value)
     {
         int number = PlayerPrefs.GetInt("DiamondNumber", 0);
-        PlayerPrefs.GetInt("DiamondNumber", number - value);
+        PlayerPrefs.SetInt("DiamondNumber", number - value);
     }
 
     public static int GetDiamond()
