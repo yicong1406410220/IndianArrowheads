@@ -21,5 +21,32 @@ public class DiamondStorePanel : PanelBase {
 
     }
 
+    public void OnClickBtn1()
+    {
+        SoundManager.instance.PlayBtn();
+        PlayerData.AddDiamond(30);
+        Close();
+    }
+
+    public void OnClickBtn2()
+    {
+        SoundManager.instance.PlayBtn();
+        PlayerData.AddDiamond(70);
+        Close();
+    }
+
+    public void OnClickBtn3()
+    {
+        SoundManager.instance.PlayBtn();
+        PlayerData.AddDiamond(180);
+        Close();
+    }
+
+    public void OnClickBtn4()
+    {
+        SoundManager.instance.PlayBtn();
+        PlayerData.AddDiamond(250);
+        Close();
+    }
 
 }
