@@ -40,6 +40,10 @@ public class DataManager : MonoBehaviour {
 
         KeyValue.SetDouble("LiveCoolingTime", TimeManager.GetNow());
         PlayerPrefs.SetInt("AdditionalLiveNumber", 0);
+
+        PlayerPrefs.SetInt("IsSoundOpen", 1);
+        PlayerPrefs.SetInt("FirstGame", 1);
+
     }
 
 
