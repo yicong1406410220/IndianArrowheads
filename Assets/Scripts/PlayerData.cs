@@ -77,7 +77,7 @@ public static class PlayerData {
         else
         {            
             number = 5;
-            while (DTime < 0)
+            while (DTime > 0)
             {
                 number--;
                 DTime = DTime - 10 * 60;
@@ -93,7 +93,7 @@ public static class PlayerData {
         if (DTime <= 0)
         {
             int AdditionalLiveNumber = PlayerPrefs.GetInt("AdditionalLiveNumber", 0);
-            if (AdditionalLiveNumber - 1 > 0)
+            if (AdditionalLiveNumber - 1 >= 0)
             {
                 PlayerPrefs.SetInt("AdditionalLiveNumber", AdditionalLiveNumber - 1);
             }
@@ -108,6 +108,65 @@ public static class PlayerData {
             KeyValue.SetDouble("LiveCoolingTime", LiveCoolingTime + 10 * 60);           
         }
 
+    }
+
+    /// <summary>
+    /// 下一次恢复体力的冷却时间
+    /// </summary>
+    /// <returns></returns>
+    public static double GetLiveRecoverTime()
+    {
+        double LiveRecoverTime;
+        double LiveCoolingTime = KeyValue.GetDouble("LiveCoolingTime", 0);
+        double DTime = LiveCoolingTime - TimeManager.GetNow();
+        if (DTime <= 0)
+        {
+            LiveRecoverTime = -1;
+        }
+        else
+        {
+            LiveRecoverTime = DTime;
+        }
+        return LiveRecoverTime;
+    }
+
+    public static string GetLiveRecoverTimeString()
+    {
+        string LiveRecoverTimeString;
+        int LiveRecoverTime = (int)GetLiveRecoverTime();
+        LiveRecoverTime = LiveRecoverTime % (10 * 60);
+        if (LiveRecoverTime >= 0)
+        {
+            int a = LiveRecoverTime / 60;
+            int b = LiveRecoverTime % 60;
+            string A;
+            string B;
+            if (a < 10)
+            {
+                A = "0" + a;          
+            }
+            else
+            {
+                A = "" + a;
+            }
+
+            if (b < 10)
+            {
+                B = "0" + b;
+            }
+            else
+            {
+                B = "" + b;
+            }
+
+            LiveRecoverTimeString = A + ":" + B;
+        }
+        else
+        {
+            LiveRecoverTimeString = "full";
+        }
+
+        return LiveRecoverTimeString;
     }
 
     #region 获得道具数量

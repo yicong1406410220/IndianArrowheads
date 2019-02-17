@@ -9,7 +9,7 @@ using System;
 /// </summary>
 public static class KeyValue{
 
-    [MenuItem("Tools/清除PlayPrefeb #&D", false, 1)]
+    [MenuItem("Tools/清除PlayPres #&D", false, 1)]
     static public void DeleteAll()
     {
         PlayerPrefs.DeleteAll();
