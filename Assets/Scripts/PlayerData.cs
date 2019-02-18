@@ -64,6 +64,15 @@ public static class PlayerData {
         }
     }
 
+    public static void AddLive(int addLive)
+    {
+        for (int i = 0; i < addLive; i++)
+        {
+            AddLive();
+        }
+    }
+    
+
     public static int GetLive()
     {
         int number;

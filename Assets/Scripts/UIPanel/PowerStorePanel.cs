@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,5 +22,44 @@ public class PowerStorePanel : PanelBase {
 
     }
 
+    public void OnClickBtn1()
+    {
+        SoundManager.instance.PlayBtn();
+        UseDiamondAddLive(15, 5);
+    }
+
+    public void OnClickBtn2()
+    {
+        SoundManager.instance.PlayBtn();
+        UseDiamondAddLive(30, 11);
+    }
+
+    public void OnClickBtn3()
+    {
+        SoundManager.instance.PlayBtn();
+        UseDiamondAddLive(60, 24);
+    }
+
+    public void OnClickBtn4()
+    {
+        SoundManager.instance.PlayBtn();
+        UseDiamondAddLive(120, 52);
+    }
+
+
+    private void UseDiamondAddLive(int useDiamond, int addLive)
+    {
+        int Diamond = PlayerData.GetDiamond();
+        if (Diamond < useDiamond)
+        {
+            PanelMgr.instance.OpenPanel<DiamondStorePanel>("");
+        }
+        else
+        {
+            PlayerData.UseDiamond(useDiamond);
+            PlayerData.AddLive(addLive);
+            Close();
+        }
+    }
 
 }
