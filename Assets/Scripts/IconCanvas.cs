@@ -12,9 +12,18 @@ public class IconCanvas : MonoBehaviour {
     public Text GemNumber;
     public Text GoldNumber;
 
+    private Canvas canvas;
+
+    private void Awake()
+    {
+        canvas = GetComponent<Canvas>();
+        canvas.worldCamera = Camera.main;
+    }
+
     // Use this for initialization
     void Start () {
         StartCoroutine(LiveUpdate());
+        
     }
 
     private IEnumerator LiveUpdate()
@@ -42,6 +51,12 @@ public class IconCanvas : MonoBehaviour {
         }
     }
 
+    public void OnClickExit()
+    {
+        SoundManager.instance.PlayBtn();
+        SceneJump.instance.Jump(SceneType.Start);
+    }
+
     public void OpenDiamondStorePanel()
     {
         SoundManager.instance.PlayBtn();
@@ -64,5 +79,11 @@ public class IconCanvas : MonoBehaviour {
     {
         SoundManager.instance.PlayBtn();
         PanelMgr.instance.OpenPanel<MusicSettingPanel>("");
+    }
+
+    public void OpenKeyPanel()
+    {
+        SoundManager.instance.PlayBtn();
+        PanelMgr.instance.OpenPanel<KeyPanel>("");
     }
 }

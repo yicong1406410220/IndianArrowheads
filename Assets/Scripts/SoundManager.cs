@@ -24,7 +24,7 @@ public class SoundManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        
 	}
 
     public void RefreshSound()

@@ -4,3 +4,10 @@
     StopBaby,
     TimeUp,
 }
+
+public enum SceneType
+{
+    Start,
+    Map,
+    Game,
+}

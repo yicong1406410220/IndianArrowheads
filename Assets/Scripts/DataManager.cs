@@ -36,12 +36,11 @@ public class DataManager : MonoBehaviour {
         PlayerData.AddDiamond(Convert.ToInt32(DB_Player["1"]["diamond"]));
         PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["gold"]));
 
-        PlayerPrefs.SetInt("FirstGame", 1);
+        PlayerPrefs.SetInt("DB_GateLevel", 1);
 
         KeyValue.SetDouble("LiveCoolingTime", TimeManager.GetNow());
         PlayerPrefs.SetInt("AdditionalLiveNumber", 0);
 
-        PlayerPrefs.SetInt("IsSoundOpen", 1);
         PlayerPrefs.SetInt("FirstGame", 1);
 
     }

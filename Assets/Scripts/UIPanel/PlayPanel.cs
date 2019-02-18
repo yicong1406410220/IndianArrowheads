@@ -8,6 +8,29 @@ public class PlayPanel : PanelBase {
 
     public static PlayPanel instance;
 
+    public Text LiveNumber;
+    public Text LiveTime;
+
+    public Text GemNumber;
+
+    // Use this for initialization
+    void Start()
+    {
+        StartCoroutine(LiveUpdate());
+    }
+
+    private IEnumerator LiveUpdate()
+    {
+        while (true)
+        {
+            LiveNumber.text = PlayerData.GetLive().ToString();
+            LiveTime.text = PlayerData.GetLiveRecoverTimeString().ToString();
+            GemNumber.text = PlayerData.GetDiamond().ToString();
+            yield return new WaitForSeconds(1.0f);
+        }
+
+    }
+
     public override void Init(params object[] args)
     {
         base.Init(args);
