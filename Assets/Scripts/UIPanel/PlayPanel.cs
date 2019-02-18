@@ -10,13 +10,23 @@ public class PlayPanel : PanelBase {
 
     public Text LiveNumber;
     public Text LiveTime;
-
     public Text GemNumber;
+
+    public GameObject[] hints;
+    public GameObject[] PropFronts;
+    public Button[] PropButtons;
+
+    public bool[] SelectionStatuss = new bool[6];
 
     // Use this for initialization
     void Start()
-    {
+    { 
         StartCoroutine(LiveUpdate());
+        for (int i = 0; i < SelectionStatuss.Length; i++)
+        {
+            SelectionStatuss[i] = false;
+        }
+
     }
 
     private IEnumerator LiveUpdate()
@@ -52,6 +62,25 @@ public class PlayPanel : PanelBase {
         Sequence mySequence = DOTween.Sequence();
         mySequence.Append(bg.DOScale(1.1f, 0.3f)).Append(bg.DOScale(1f, 0.2f)).AppendCallback(() => { OnShowed(); });
 
+    }
+
+
+    public void OpenDiamondStorePanel()
+    {
+        SoundManager.instance.PlayBtn();
+        PanelMgr.instance.OpenPanel<DiamondStorePanel>("");
+    }
+
+    //public void OpenGoldStorePanel()
+    //{
+    //    SoundManager.instance.PlayBtn();
+    //    PanelMgr.instance.OpenPanel<GoldStorePanel>("");
+    //}
+
+    public void OpenPowerStorePanel()
+    {
+        SoundManager.instance.PlayBtn();
+        PanelMgr.instance.OpenPanel<PowerStorePanel>("");
     }
 
 

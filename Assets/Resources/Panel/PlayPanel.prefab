@@ -115,7 +115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1102145761946228
 GameObject:
   m_ObjectHideFlags: 1
@@ -132,7 +132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1119653298498884
 GameObject:
   m_ObjectHideFlags: 1
@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1143745265223844
 GameObject:
   m_ObjectHideFlags: 1
@@ -166,7 +166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1162609384804752
 GameObject:
   m_ObjectHideFlags: 1
@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1377169760053422
 GameObject:
   m_ObjectHideFlags: 1
@@ -717,7 +717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1774685376987634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1733,29 @@ MonoBehaviour:
   LiveNumber: {fileID: 114734871409289264}
   LiveTime: {fileID: 114833093447550188}
   GemNumber: {fileID: 114222347343362842}
+  hints:
+  - {fileID: 1651178633237004}
+  - {fileID: 1507027413248824}
+  - {fileID: 1990881866680906}
+  - {fileID: 1539892728751706}
+  - {fileID: 1536362403903090}
+  - {fileID: 1693724653508120}
+  - {fileID: 1047139033441762}
+  PropFronts:
+  - {fileID: 1102145761946228}
+  - {fileID: 1143745265223844}
+  - {fileID: 1740494626622766}
+  - {fileID: 1339131021046102}
+  - {fileID: 1119653298498884}
+  - {fileID: 1100452089908370}
+  PropButtons:
+  - {fileID: 114551157180309396}
+  - {fileID: 114590587714038364}
+  - {fileID: 114532030795494672}
+  - {fileID: 114716479142424278}
+  - {fileID: 114244552220832302}
+  - {fileID: 114944963785909766}
+  SelectionStatuss: 000000000000
 --- !u!114 &114532030795494672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1908,7 +1931,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114522075005381502}
         m_MethodName: OpenPowerStorePanel
         m_Mode: 1
         m_Arguments:
@@ -2082,7 +2105,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114522075005381502}
         m_MethodName: OpenDiamondStorePanel
         m_Mode: 1
         m_Arguments:

@@ -8,7 +8,6 @@ public class MapCanvas : MonoBehaviour {
 
     private void Awake()
     {
-        Debug.Log("你好");
         canvas = GetComponent<Canvas>();
         canvas.worldCamera = Camera.main;
     }

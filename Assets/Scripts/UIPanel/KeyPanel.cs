@@ -45,7 +45,7 @@ public class KeyPanel : PanelBase {
                 //…Ë÷√πÿø®
                 PlayerPrefs.SetInt("DB_GateLevel", GateLevel);
             }
-            Close();
+            SceneJump.instance.Jump(SceneType.Start);
         }
     }
 

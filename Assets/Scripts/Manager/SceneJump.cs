@@ -22,7 +22,6 @@ public class SceneJump : MonoBehaviour {
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-        Instantiate(StartCanvasObj);
         SceneManager.activeSceneChanged += ChangedActiveScene;
     }
 
