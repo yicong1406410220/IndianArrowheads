@@ -11,3 +11,14 @@ public enum SceneType
     Map,
     Game,
 }
+
+//play界面道具
+public enum PlayGameProps
+{
+    SuperBrick,
+    SightingDevice,
+    PowerPotion,
+    FourLeavedClover,
+    MingEyepiece,
+    ThroughThePill,
+}
