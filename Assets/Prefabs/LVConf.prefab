@@ -598,6 +598,8 @@ MonoBehaviour:
   - {fileID: 1234331015929082}
   Aureole: {fileID: 1191577127267914}
   PersonConf: {fileID: 224481983437988298}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!222 &222234927817832458
 CanvasRenderer:
   m_ObjectHideFlags: 1

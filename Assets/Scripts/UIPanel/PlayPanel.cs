@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +20,8 @@ public class PlayPanel : PanelBase {
 
     private int UseDiamondNumber = 0;
 
+    public Animator animator;
+
     // Use this for initialization
     void Start()
     { 
@@ -34,6 +36,9 @@ public class PlayPanel : PanelBase {
         PropButtons[3].onClick.AddListener(OnPropButton3);
         PropButtons[4].onClick.AddListener(OnPropButton4);
         PropButtons[5].onClick.AddListener(OnPropButton5);
+        DataManager.instance.playGamePropsList.Clear();
+        AnimationListener.animationEvent.RemoveAllListeners();
+        AnimationListener.animationEvent.AddListener(EndLiveAnimation);
     }
 
     private IEnumerator LiveUpdate()
@@ -131,6 +136,7 @@ public class PlayPanel : PanelBase {
                 SelectionStatuss[value] = true;
                 UseDiamondNumber = UseDiamondNumber + NeedDiamond;
                 PropFronts[value].SetActive(true);
+                SetHint(value);
             }
             else
             {
@@ -142,6 +148,54 @@ public class PlayPanel : PanelBase {
             SelectionStatuss[value] = false;
             UseDiamondNumber = UseDiamondNumber - NeedDiamond;
             PropFronts[value].SetActive(false);
+            SetHint(6);
+        }
+        //刷新存储的道具
+        DataManager.instance.playGamePropsList.Clear();
+        for (int i = 0; i < SelectionStatuss.Length; i++)
+        {
+            if (SelectionStatuss[i] == true)
+            {
+                DataManager.instance.playGamePropsList.Add((PlayGameProps)i);              
+            }
+            
         }
     }
+
+    private void SetHint(int value)
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            if (value == i)
+            {
+                hints[i].SetActive(true);
+            }
+            else
+            {
+                hints[i].SetActive(false);
+            }
+        }
+    }
+
+    public void OnClickPlay()
+    {
+        SoundManager.instance.PlayBtn();
+        if (PlayerData.GetLive() > 0)
+        {
+            PlayerData.UseLive();
+            animator.SetTrigger("start");
+        }
+        else
+        {
+            PanelMgr.instance.OpenPanel<PowerStorePanel>("");
+        }
+        
+    }
+
+    public void EndLiveAnimation(int value)
+    {
+        PlayerData.UseDiamond(UseDiamondNumber);
+        Debug.Log("跳转场景");
+    }
+
 }

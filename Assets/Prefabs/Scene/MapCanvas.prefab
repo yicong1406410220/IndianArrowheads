@@ -5638,6 +5638,8 @@ MonoBehaviour:
   - {fileID: 1167517544047664}
   Aureole: {fileID: 1929747319392256}
   PersonConf: {fileID: 224391267179971494}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114115984981213566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6021,6 +6023,8 @@ MonoBehaviour:
   - {fileID: 1991096549371236}
   Aureole: {fileID: 1518396102125012}
   PersonConf: {fileID: 224125851924254394}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114189452851240694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6288,6 +6292,8 @@ MonoBehaviour:
   - {fileID: 1307855857742758}
   Aureole: {fileID: 1992181372836190}
   PersonConf: {fileID: 224578950319343862}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114219934670247184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6463,6 +6469,8 @@ MonoBehaviour:
   - {fileID: 1778411450117274}
   Aureole: {fileID: 1157935486438454}
   PersonConf: {fileID: 224616316232421164}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114241856403109100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6597,6 +6605,8 @@ MonoBehaviour:
   - {fileID: 1083705126327922}
   Aureole: {fileID: 1691445858593798}
   PersonConf: {fileID: 224574495858728144}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114281313221836968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7047,6 +7057,8 @@ MonoBehaviour:
   - {fileID: 1270221365151942}
   Aureole: {fileID: 1876578507770788}
   PersonConf: {fileID: 224821671558403680}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114339724302891826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7208,6 +7220,8 @@ MonoBehaviour:
   - {fileID: 1940905228641252}
   Aureole: {fileID: 1105650715558364}
   PersonConf: {fileID: 224262478378744302}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114363963999305554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7558,6 +7572,8 @@ MonoBehaviour:
   - {fileID: 1808255816945542}
   Aureole: {fileID: 1358005685836302}
   PersonConf: {fileID: 224998346623257722}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114424239701566898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8112,6 +8128,8 @@ MonoBehaviour:
   - {fileID: 1876495710772310}
   Aureole: {fileID: 1992200538129242}
   PersonConf: {fileID: 224278341505504396}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114488469743247244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8132,6 +8150,8 @@ MonoBehaviour:
   - {fileID: 1719123948845184}
   Aureole: {fileID: 1947375569335134}
   PersonConf: {fileID: 224871732438211818}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114490432545350272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8258,6 +8278,8 @@ MonoBehaviour:
   - {fileID: 1235199956089196}
   Aureole: {fileID: 1384739621019392}
   PersonConf: {fileID: 224879260042753646}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114494118717787558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8444,6 +8466,8 @@ MonoBehaviour:
   - {fileID: 1904942465983974}
   Aureole: {fileID: 1455738141401868}
   PersonConf: {fileID: 224968166379628376}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114507490650242170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8624,6 +8648,8 @@ MonoBehaviour:
   - {fileID: 1844806691556022}
   Aureole: {fileID: 1642543491119942}
   PersonConf: {fileID: 224601393479985394}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114523883297498520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9186,6 +9212,8 @@ MonoBehaviour:
   - {fileID: 1243142504671248}
   Aureole: {fileID: 1929035523761660}
   PersonConf: {fileID: 224217189891537458}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114626044178554092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9206,6 +9234,8 @@ MonoBehaviour:
   - {fileID: 1727921165175544}
   Aureole: {fileID: 1189590333062326}
   PersonConf: {fileID: 224605691926634494}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114627098419167496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9367,6 +9397,8 @@ MonoBehaviour:
   - {fileID: 1683175120754864}
   Aureole: {fileID: 1489421939869716}
   PersonConf: {fileID: 224474582177188722}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114657207883374366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9522,6 +9554,8 @@ MonoBehaviour:
   - {fileID: 1048449079408490}
   Aureole: {fileID: 1691503685553306}
   PersonConf: {fileID: 224259380118249718}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114682384984693048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9623,6 +9657,8 @@ MonoBehaviour:
   - {fileID: 1116378070794270}
   Aureole: {fileID: 1670327937418574}
   PersonConf: {fileID: 224914381590755584}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114695685134141162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9778,6 +9814,8 @@ MonoBehaviour:
   - {fileID: 1011292269063844}
   Aureole: {fileID: 1068292082733900}
   PersonConf: {fileID: 224310122432929418}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114723119684425556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10481,6 +10519,8 @@ MonoBehaviour:
   - {fileID: 1820615038493640}
   Aureole: {fileID: 1976456257379614}
   PersonConf: {fileID: 224819977165565978}
+  PersonConf2: {fileID: 1506411179299818, guid: f7ffe885eb7aa934dba00b7336b30259,
+    type: 2}
 --- !u!114 &114837589207410830
 MonoBehaviour:
   m_ObjectHideFlags: 1

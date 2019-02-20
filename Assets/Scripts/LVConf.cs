@@ -12,6 +12,7 @@ public class LVConf : MonoBehaviour
     public GameObject[] StarFronts;
     public GameObject Aureole;
     public Transform PersonConf;
+    public GameObject PersonConf2;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,7 @@ public class LVConf : MonoBehaviour
         if (GateLevel == LV)
         {
             Aureole.SetActive(true);
+            Instantiate(PersonConf2, PersonConf);
         }
         if (GateLevel >= LV)
         {
@@ -55,6 +57,7 @@ public class LVConf : MonoBehaviour
         if (LV <= GateLevel)
         {
             SoundManager.instance.PlayBtn();
+            DataManager.instance.PlayLV = LV;
             PanelMgr.instance.OpenPanel<PlayPanel>("");
         }
     }

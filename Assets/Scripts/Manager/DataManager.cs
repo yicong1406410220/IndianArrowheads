@@ -10,6 +10,16 @@ public class DataManager : MonoBehaviour {
     public Dictionary<string, Dictionary<string, string>> DB_Player;
     public Dictionary<string, Dictionary<string, string>> DB_Digger;
 
+    /// <summary>
+    /// 玩家要玩的关卡
+    /// </summary>
+    public int PlayLV = 0;
+
+    /// <summary>
+    /// 游戏选择道具列表
+    /// </summary>
+    public List<PlayGameProps> playGamePropsList = new List<PlayGameProps>();
+
     private void Awake()
     {
         if (instance != null)
