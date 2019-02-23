@@ -45,10 +45,10 @@ public class DataManager : MonoBehaviour {
 
         PlayerData.AddDiamond(Convert.ToInt32(DB_Player["1"]["diamond"]));
         PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["gold"]));
-        PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["Bomb"]));
-        PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["StepUp"]));
-        PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["StopBaby"]));
-        PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["TimeUp"]));
+        PlayerData.AddGameProps(GameProps.Bomb,Convert.ToInt32(DB_Player["1"]["Bomb"]));
+        PlayerData.AddGameProps(GameProps.StepUp, Convert.ToInt32(DB_Player["1"]["StepUp"]));
+        PlayerData.AddGameProps(GameProps.StopBaby, Convert.ToInt32(DB_Player["1"]["StopBaby"]));
+        PlayerData.AddGameProps(GameProps.TimeUp, Convert.ToInt32(DB_Player["1"]["TimeUp"]));
 
         PlayerPrefs.SetInt("DB_GateLevel", 1);
 
