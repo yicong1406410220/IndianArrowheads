@@ -1,8 +1,8 @@
 ﻿public enum GameProps {
-    Bomb,
-    StepUp,
-    StopBaby,
-    TimeUp,
+    Bomb,//炸弹
+    StepUp, //加5步
+    StopBaby,//时间冻结
+    TimeUp,//加30秒
 }
 
 public enum SceneType
