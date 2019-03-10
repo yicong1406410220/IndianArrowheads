@@ -14,7 +14,7 @@ public static class TreasureCreator {
             return Create("MinDiamond");
         else if (treasureID == TreasureID.Chest)
             return Create("Chest");
-        else if (treasureID == TreasureID.SigleMouse)
+   /*     else if (treasureID == TreasureID.SigleMouse)
         {
             Treasure treasure = Create("SigleMouse");
             if (Convert.ToInt32(levelData.total) % 2 != 0)
@@ -24,7 +24,7 @@ public static class TreasureCreator {
             }
             
             return treasure;
-        }    
+        }  */  
         else if (treasureID == TreasureID.MinStone)
             return Create("MinStone");
         else if (treasureID == TreasureID.DiamondMouse)

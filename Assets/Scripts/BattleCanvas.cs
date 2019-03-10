@@ -16,6 +16,7 @@ public class BattleCanvas : MonoBehaviour {
     [SerializeField] GameObject scoreStarContainer;
     ScoreTipPanel scoreTipPanel;
 
+
     static BattleCanvas instance;
     static public BattleCanvas Instance
     {
@@ -35,7 +36,8 @@ public class BattleCanvas : MonoBehaviour {
         GetComponent<Canvas>().worldCamera = Camera.main;
         pauseButton.onClick.AddListener(OnClickPauseButton);
 
-        //TODO： 初始化道具点击事件
+        if (EntityManager.Instance.GetLevelEntity().isTimeOrStep)
+            InvokeRepeating("Countdown", 1, 1);
     }
 
     public void SetBgImage(string name)
@@ -151,7 +153,8 @@ public class BattleCanvas : MonoBehaviour {
 
     public void AddScore(int socre)
     {
-        var playerMinerEntity = EntityManager.Instance.GetPlayerMinerEntity();
+        var entityManager = EntityManager.Instance;
+        var playerMinerEntity = entityManager.GetPlayerMinerEntity();
         playerMinerEntity.score += socre;
 
         string scoreText = playerMinerEntity.score + " / "
@@ -159,6 +162,18 @@ public class BattleCanvas : MonoBehaviour {
 
         BattleCanvas.Instance.GetScoreTipPanel().SetScoreText(scoreText);
         BattleCanvas.Instance.AddScoreFlowText(socre);
+
+        var levelEntity = entityManager.GetLevelEntity();
+        if (playerMinerEntity.score >= levelEntity.passScore) {
+            if (playerMinerEntity.starCount == 0)
+                AddScoreStar();
+
+            if (playerMinerEntity.starCount == 1 && playerMinerEntity.score >= levelEntity.passScore + levelEntity.perAddStarScore)
+                AddScoreStar();
+
+            if (playerMinerEntity.starCount == 2 && playerMinerEntity.score >= levelEntity.passScore + levelEntity.perAddStarScore * 2)
+                AddScoreStar();
+        }    
     }
 
   
@@ -188,7 +203,15 @@ public class BattleCanvas : MonoBehaviour {
         GameObject scoreStar = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/UI/ScoreStar"));
         scoreStar.transform.position = new Vector3(startX + starCount * gapX, startY, 0);
         scoreStar.transform.SetParent(scoreStarContainer.transform, false);
-        scoreStar.transform.DOLocalMoveY(endY, 1f);
+        scoreStar.transform.DOLocalMoveY(endY, 1f).OnComplete(()=> {
+            if (EntityManager.Instance.GetPlayerMinerEntity().starCount == 3)
+            {
+                PanelMgr.instance.OpenPanel<WinPanel>("");
+                EntityManager.Instance.GetLevelEntity().isPause = true;
+            }
+        });
+
+        ++EntityManager.Instance.GetPlayerMinerEntity().starCount;
     }
 
 
@@ -207,5 +230,21 @@ public class BattleCanvas : MonoBehaviour {
                        .SetParent(transform, false);
     }
 
+
+    void Countdown()
+    {
+        var levelEntity = EntityManager.Instance.GetLevelEntity();
+        if (levelEntity.timeStep == 0)
+        {
+            if (EntityManager.Instance.GetPlayerMinerEntity().starCount == 0)   
+                PanelMgr.instance.OpenPanel<LosePanel>("");
+            else
+                PanelMgr.instance.OpenPanel<WinPanel>("");
+
+            EntityManager.Instance.GetLevelEntity().isPause = true;
+        }
+        else
+            scoreTipPanel.SetTimeOrStep(--levelEntity.timeStep);
+    }
 }
 

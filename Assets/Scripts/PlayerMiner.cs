@@ -13,6 +13,10 @@ public class PlayerMiner : MonoBehaviour
         {
             animator.Play("Drab");
             miningMachine.Status = MiningMachineStatus.Drop;
+
+            var levelEntity = EntityManager.Instance.GetLevelEntity();
+            if (!levelEntity.isTimeOrStep)
+                BattleCanvas.Instance.GetScoreTipPanel().SetTimeOrStep(--levelEntity.timeStep);
         }
     }
 

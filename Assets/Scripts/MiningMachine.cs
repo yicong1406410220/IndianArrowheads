@@ -80,6 +80,17 @@ public class MiningMachine : MonoBehaviour {
         }
 
         transform.position = position;
+
+        var levelEntity = EntityManager.Instance.GetLevelEntity();
+        if (!levelEntity.isTimeOrStep && levelEntity.timeStep == 0)
+        {
+            if (EntityManager.Instance.GetPlayerMinerEntity().starCount == 0)
+                PanelMgr.instance.OpenPanel<LosePanel>("");
+            else
+                PanelMgr.instance.OpenPanel<WinPanel>("");
+
+            EntityManager.Instance.GetLevelEntity().isPause = true;
+        }
     }
 
 

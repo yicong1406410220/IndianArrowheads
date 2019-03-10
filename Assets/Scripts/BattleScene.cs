@@ -7,7 +7,7 @@ public class BattleScene : MonoBehaviour {
     PlayerMiner playerMiner;
 
     void Start () {
-        int level = 1;
+        int level = 3;
         var levelDatas = LevelDataReader.GetLevelDatas(level);
         initLevelEntity(level, levelDatas);
         initPlayerEntity();
@@ -19,9 +19,12 @@ public class BattleScene : MonoBehaviour {
 
     void Update()
     {
-        playerMiner.UpdateProcess();
-        if (Input.GetKeyDown(KeyCode.A))
-            BattleCanvas.Instance.AddScoreStar();
+        if (!EntityManager.Instance.GetLevelEntity().isPause)
+        {
+            playerMiner.UpdateProcess();
+            if (Input.GetKeyDown(KeyCode.A))
+                BattleCanvas.Instance.AddScoreStar();
+        }
     }
 
 
@@ -30,7 +33,11 @@ public class BattleScene : MonoBehaviour {
         var levelEntity = EntityManager.Instance.GetLevelEntity();
         levelEntity.levelDatas = levelDatas;
         levelEntity.level = level;
+        levelEntity.isPause = false;
+        levelEntity.isTimeOrStep = levelDatas[0].isTimeOrStep == "0" ? true : false;
+        levelEntity.timeStep = Convert.ToInt32(levelDatas[0].timeStep);
         levelEntity.passScore = Convert.ToInt32(levelDatas[0].target1.Split(',')[1]);
+        levelEntity.perAddStarScore = Convert.ToInt32(levelDatas[0].target2.Split(',')[1]);
     }
 
 
