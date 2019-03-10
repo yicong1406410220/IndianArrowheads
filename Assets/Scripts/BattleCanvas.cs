@@ -220,6 +220,8 @@ public class BattleCanvas : MonoBehaviour {
         pauseButton.transform.DOScale(1.08f, 0.1f).OnComplete(()=> {
             pauseButton.transform.DOScale(1f, 0.1f);
         });
+        SoundManager.instance.PlayBtn();
+        PanelMgr.instance.OpenPanel<PausePanel>("");
     }
 
 

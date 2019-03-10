@@ -7,7 +7,7 @@ public class BattleScene : MonoBehaviour {
     PlayerMiner playerMiner;
 
     void Start () {
-        int level = 3;
+        int level = DataManager.instance.PlayLV;
         var levelDatas = LevelDataReader.GetLevelDatas(level);
         initLevelEntity(level, levelDatas);
         initPlayerEntity();
