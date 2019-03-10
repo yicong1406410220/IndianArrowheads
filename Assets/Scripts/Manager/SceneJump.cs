@@ -53,7 +53,7 @@ public class SceneJump : MonoBehaviour {
         }
         else if (NowScene == SceneType.Game)
         {
-            SceneManager.LoadScene("start");
+            //SceneManager.LoadScene("start");
         }
     }
 
