@@ -442,6 +442,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layer: 0
+  score: {fileID: 114551411852665876}
+  Stars:
+  - {fileID: 1580579245544564}
+  - {fileID: 1135603541818870}
+  - {fileID: 1177823612825990}
 --- !u!114 &114378058179552124
 MonoBehaviour:
   m_ObjectHideFlags: 1
