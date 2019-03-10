@@ -7,9 +7,6 @@ public class DataManager : MonoBehaviour {
 
     public static DataManager instance;
 
-    public Dictionary<string, Dictionary<string, string>> DB_Player;
-    public Dictionary<string, Dictionary<string, string>> DB_Digger;
-
     /// <summary>
     /// 玩家要玩的关卡
     /// </summary>
@@ -43,12 +40,6 @@ public class DataManager : MonoBehaviour {
             return;
         }
 
-        PlayerData.AddDiamond(Convert.ToInt32(DB_Player["1"]["diamond"]));
-        PlayerData.AddGold(Convert.ToInt32(DB_Player["1"]["gold"]));
-        PlayerData.AddGameProps(GameProps.Bomb,Convert.ToInt32(DB_Player["1"]["Bomb"]));
-        PlayerData.AddGameProps(GameProps.StepUp, Convert.ToInt32(DB_Player["1"]["StepUp"]));
-        PlayerData.AddGameProps(GameProps.StopBaby, Convert.ToInt32(DB_Player["1"]["StopBaby"]));
-        PlayerData.AddGameProps(GameProps.TimeUp, Convert.ToInt32(DB_Player["1"]["TimeUp"]));
 
         PlayerPrefs.SetInt("DB_GateLevel", 1);
 
@@ -64,8 +55,7 @@ public class DataManager : MonoBehaviour {
 
     private void LoadDB()
     {
-        DB_Player = ExcelDocumentsParse.LoadExcel("Player");
-        DB_Digger = ExcelDocumentsParse.LoadExcel("Digger");
+
     }
 
 

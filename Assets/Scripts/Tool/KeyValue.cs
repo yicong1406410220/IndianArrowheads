@@ -9,7 +9,9 @@ using System;
 /// </summary>
 public static class KeyValue{
 
+#if UNITY_EDITOR
     [MenuItem("Tools/清除PlayPres #&D", false, 1)]
+#endif
     static public void DeleteAll()
     {
         PlayerPrefs.DeleteAll();

@@ -39,7 +39,7 @@ public static class ExcelDocumentsParse
     public static string ReadExcel(string FileName, int WhichTable, int Whichline, int HowManyColumns)
     {
         string path = Application.streamingAssetsPath + "/Excel/" + FileName + ".xlsx";
-        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
         {
             using (ExcelPackage excel = new ExcelPackage(fs))
             {
@@ -72,7 +72,7 @@ public static class ExcelDocumentsParse
     public static int ReadExcelWhichTableNumber(string FileName)
     {
         string path = Application.streamingAssetsPath + "/Excel/" + FileName + ".xlsx";
-        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
         {
             using (ExcelPackage excel = new ExcelPackage(fs))
             {
@@ -90,7 +90,7 @@ public static class ExcelDocumentsParse
     public static int ReadExcelRow(string FileName, int WhichTable)
     {
         string path = Application.streamingAssetsPath + "/Excel/" + FileName + ".xlsx";
-        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
         {
             using (ExcelPackage excel = new ExcelPackage(fs))
             {
@@ -114,7 +114,7 @@ public static class ExcelDocumentsParse
     public static int ReadExcelCol(string FileName, int WhichTable)
     {
         string path = Application.streamingAssetsPath + "/Excel/" + FileName + ".xlsx";
-        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
         {
             using (ExcelPackage excel = new ExcelPackage(fs))
             {
