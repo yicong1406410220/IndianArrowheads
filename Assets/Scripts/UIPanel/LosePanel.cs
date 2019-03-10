@@ -21,5 +21,15 @@ public class LosePanel : PanelBase {
 
     }
 
+    public void OnLVButton()
+    {
+        SoundManager.instance.PlayBtn();
+        SceneJump.instance.Jump(SceneType.Map);
+    }
 
+    public void OnReplayButton()
+    {
+        SoundManager.instance.PlayBtn();
+        SceneJump.instance.Jump(SceneType.Game);
+    }
 }
