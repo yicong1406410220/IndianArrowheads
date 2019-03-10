@@ -12,7 +12,12 @@ public class WinPanel : PanelBase {
         base.Init(args);
         layer = PanelLayer.Panel;
         instance = this;
-        
+        int GateLevel = PlayerPrefs.GetInt("DB_GateLevel");
+        if (GateLevel == DataManager.instance.PlayLV)
+        {
+            GateLevel++;
+            PlayerPrefs.SetInt("DB_GateLevel", GateLevel);
+        }
     }
 
     public override void OnShowing()
@@ -21,5 +26,22 @@ public class WinPanel : PanelBase {
 
     }
 
+    public void OnLVButton()
+    {
+        SoundManager.instance.PlayBtn();
+        SceneJump.instance.Jump(SceneType.Map);
+    }
 
+    public void OnReplayButton()
+    {
+        SoundManager.instance.PlayBtn();
+        SceneJump.instance.Jump(SceneType.Game);
+    }
+
+    public void OnNextButton()
+    {
+        SoundManager.instance.PlayBtn();
+        DataManager.instance.PlayLV++;
+        SceneJump.instance.Jump(SceneType.Game);
+    }
 }
