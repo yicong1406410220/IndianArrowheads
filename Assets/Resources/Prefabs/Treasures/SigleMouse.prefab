@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 10
-  mass: 0
+  mass: 20
   speed: 0.8
 --- !u!212 &212700079510213946
 SpriteRenderer:

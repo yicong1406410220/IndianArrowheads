@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 10
-  mass: 0
+  mass: 10
 --- !u!212 &212680427703780716
 SpriteRenderer:
   m_ObjectHideFlags: 1

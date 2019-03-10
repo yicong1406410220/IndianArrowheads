@@ -37,8 +37,6 @@ public class PlayPanel : PanelBase {
         PropButtons[4].onClick.AddListener(OnPropButton4);
         PropButtons[5].onClick.AddListener(OnPropButton5);
         DataManager.instance.playGamePropsList.Clear();
-        AnimationListener.animationEvent.RemoveAllListeners();
-        AnimationListener.animationEvent.AddListener(EndLiveAnimation);
     }
 
     private IEnumerator LiveUpdate()
@@ -195,7 +193,18 @@ public class PlayPanel : PanelBase {
     public void EndLiveAnimation(int value)
     {
         PlayerData.UseDiamond(UseDiamondNumber);
+        SceneJump.instance.Jump(SceneType.Game);
         Debug.Log("跳转场景");
+    }
+
+    public override void Update()
+    {
+        AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
+        // 判断动画是否播放完成
+        if (info.normalizedTime >= 1.0f && info.IsName("love"))
+        {
+            EndLiveAnimation(1);
+        }
     }
 
 }

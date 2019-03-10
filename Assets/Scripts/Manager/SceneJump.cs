@@ -75,7 +75,7 @@ public class SceneJump : MonoBehaviour {
         }
         else if (sceneType == SceneType.Game)
         {
-            SceneManager.LoadScene("start");
+            SceneManager.LoadScene("battle");
         }
         NowScene = sceneType;
     }
